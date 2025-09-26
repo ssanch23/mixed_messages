@@ -1,6 +1,7 @@
-const numGenerator = Math.floor(Math.random() * 4)
+const numGenerator = () => Math.floor(Math.random() * 4)
 
-console.log(numGenerator)
+
+console.log(numGenerator())
 
 const flights = {
     from: ['Atlanta', 'Dallas', 'Phoenix', 'Charlotte'],
@@ -8,19 +9,23 @@ const flights = {
     seat: ['First Class', 'Business', 'Premium Economy', 'Economy']
 }
 
+const flightGenerator = () => {
 let fromSelection;
 for (let i = 0; i < flights.from.length; i++) {
-    fromSelection = flights.from[numGenerator];
-}
+    fromSelection = flights.from[numGenerator()];
+};
 
 let toSelection;
 for (let i = 0; i < flights.to.length; i++) {
-    toSelection = flights.to[numGenerator];
-}
+    toSelection = flights.to[numGenerator()];
+};
 
 let seatSelection;
 for (let i = 0; i < flights.seat.length; i++) {
-    seatSelection = flights.seat[numGenerator];
+    seatSelection = flights.seat[numGenerator()];
+};
+
+return `Your flight departs from ${fromSelection}! You're flying to ${toSelection}! Seat type: ${seatSelection}.`
 }
 
-console.log(`Your flight leaves from ${fromSelection}! You're flying to ${toSelection}! Seat type: ${seatSelection}.`)
+console.log(flightGenerator())
