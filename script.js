@@ -10,22 +10,11 @@ const flights = {
 }
 
 const flightGenerator = () => {
-let fromSelection;
-for (let i = 0; i < flights.from.length; i++) {
-    fromSelection = flights.from[numGenerator()];
-};
+    const fromSelection = flights.from[numGenerator()];
+    const toSelection = flights.to[numGenerator()];
+    const seatSelection = flights.seat[numGenerator()];
 
-let toSelection;
-for (let i = 0; i < flights.to.length; i++) {
-    toSelection = flights.to[numGenerator()];
-};
-
-let seatSelection;
-for (let i = 0; i < flights.seat.length; i++) {
-    seatSelection = flights.seat[numGenerator()];
-};
-
-return `Your flight departs from ${fromSelection}! You're flying to ${toSelection}! Seat type: ${seatSelection}.`
+    return `Your flight departs from ${fromSelection}! You're flying to ${toSelection}! Seat type: ${seatSelection}.`
 }
 
 console.log(flightGenerator())
