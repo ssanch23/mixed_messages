@@ -1,6 +1,6 @@
 const flights = {
-    from: ['Atlanta', 'Dallas', 'Phoenix', 'Charlotte'],
-    to: ['New York City', 'Los Angeles', 'Denver', 'Miami'],
+    from: ['Atlanta', 'Dallas', 'Phoenix', 'Charlotte', 'Salt Lake City', 'Detroit'],
+    to: ['New York City', 'Los Angeles', 'Denver', 'Miami', 'Vancouver', 'Toronto', 'Seattle', 'Chicago', 'Washington DC'],
     seat: ['First Class', 'Business', 'Premium Economy', 'Economy']
 };
 
